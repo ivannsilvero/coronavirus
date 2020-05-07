@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid-19</title>
+    <link rel="shortcut icon" href="./assets/imagenes/coronavirusM.jpg" />
+    <!-- <link rel="shortcut icon" href="./assets/imagenes/icono.png" /> -->
+    <link rel="stylesheet" href="./assets/dist/css/estilos.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="contenedor">
+        <header>
+            <a href="/">
+                <img src="./assets/imagenes/logo.png">
+            </a>
+
+            <nav>
+                <ul>
+                    <li>
+                        <a href="stats">
+                            <h5>Estadísticas</h5>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <h5>Contacto</h5>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="img" img src="./assets/imagenes/hospital2.jpg">
+            <div class="introduccion">
+                <p class="titulo">COVID-19</p>
+                <br>
+                <P>Toda la informacion que podés encontrar para ayudarnos a prevenir.</P>
+            </div>
+        </div>
+
+
+{{#each info as |val key|}}
+<article>
+    <table>
+
+
+<h2>{{val.country}}</h2>
+<img src="{{val.countryInfo.flag}}">
+<h3>Cantidad de casos: {{val.cases}}</h3>
+<h3>Casos hoy: {{val.todayCases}}</h3>
+<h3>Muertes: {{val.deaths}}</h3>
+<h3>Muertes hoy:{{val.todayDeaths}}</h3>
+<h3>Recuperados: {{val.recovered}}</h3>
+<h3>Casos activos: {{val.active}}</h3>
+<h3>Casos críticos: {{val.critical}}</h3>
+<h3>Casos por millón de habitantes: {{val.casesPerOneMillion}}</h3>
+<h3> Muertes por millón de habitantes:  {{val.deathsPerOneMillion}}</h3>
+<h3>Tests: {{val.tests}}</h3>
+<h3>Tests por millón de habitantes: {{val.testsPerOneMillion}}</h3>
+<h3>Continente: {{val.continent}}</h3>
+
+    </table>
+</article>
+
+           
+{{/each}}
+        <footer>
+
+        </footer>
+    </div>
+
+    <script src="./assets/dist/js/app.js"></script>
+    <script src="./assets/imagenes/hostpital2.jpg"></script>
+</body>
+
+</html>
